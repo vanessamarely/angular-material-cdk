@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCheckboxModule} from '@angular/material';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatCheckboxModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
