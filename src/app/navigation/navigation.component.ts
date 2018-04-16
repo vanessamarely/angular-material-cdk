@@ -9,6 +9,8 @@ export class NavigationComponent implements OnInit {
 
   isOpen = false;
   selectedColor = '';
+  isOpenFont = false;
+  selectedFont='';
 
   colors = [
     { hex: '#F44336', name: 'Purple' },
@@ -20,6 +22,16 @@ export class NavigationComponent implements OnInit {
     { hex: '#FFE83B', name: 'Yellow' },
     { hex: '#FF9800', name: 'Orange' },
     { hex: '#795548', name: 'Brown' },
+  ];
+
+  fonts=[
+    { name: "verdana" },
+    { name: "courier" },
+    { name: "Comic Sans MS" },
+    { name: "Arial Black" },
+    { name: "Times New Roman" },
+    { name: "Georgia" },
+    { name: "Blackadder ITC" }
   ];
   
   constructor() { }
