@@ -1,9 +1,10 @@
-
-.app{
+.app {
   height: 100vh;
+  font-family: 'Roboto', serif;
   
-  .spacer {
-    flex: 1 1 auto;
+  .content {
+    display: flex;
+    justify-content: center;
   }
 
 }

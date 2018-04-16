@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="toolbar" [style.background]="selectedColor ">
+    <mat-toolbar-row>
+      <span><img alt="angular" class="angular-logo" src="../../assets/svg/angular.svg"> Material CDK</span>
+      <span class="spacer"></span>
+      <button mat-button [routerLink]="['']" class="navigation-opt">Home <mat-icon>home</mat-icon></button>
+      <button mat-button 
+        (click)="isOpen = !isOpen" 
+        cdkOverlayOrigin 
+        [style.background]="selectedColor || 'none'" 
+        #trigger="cdkOverlayOrigin"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">format_color_fill</mat-icon></button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <ng-template 
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="isOpen">
+
+    <div class="color-picker"
+        role="dialog" aria-label="Color picker">
+      <div role="listbox" tabindex="0" aria-label="Select a color">
+        <div *ngFor="let color of colors; index as i"
+            role="option"
+            [style.background]="color.hex"
+            [attr.aria-label]="color.name"
+            [attr.aria-selected]="color.hex == selectedColor"
+            (click)="selectedColor = color.hex; isOpen = false"></div>
+      </div>
+    </div>
+  </ng-template>
