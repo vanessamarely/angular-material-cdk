@@ -1,12 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 @import '~@angular/cdk/overlay-prebuilt.css';
 @import '~@angular/cdk/a11y-prebuilt.css';
 
+@import '~@angular/material/theming';
+
 body {
-  font-family: Roboto;
   margin: 0;
   padding: 0;
 }
+
+$general-typography: mat-typography-config(
+  $headline: mat-typography-level(52px, 30px, 900),
+  $body-1: mat-typography-level(16px, 24px, 500) 
+);
+
+@include mat-core($general-typography);
+
