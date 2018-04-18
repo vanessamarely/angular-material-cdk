@@ -1,8 +1,13 @@
 .home-content {
+  box-sizing: border-box;
   margin-top: 60px;
   text-align: center;
   h1 {
     color: #666666;
+    line-height: 1em;
+  }
+  img {
+    margin-top: 20px;
   }
 }
 

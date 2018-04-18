@@ -24,14 +24,15 @@ export class NavigationComponent implements OnInit {
     { hex: '#795548', name: 'Brown' },
   ];
 
-  fonts=[
+  fonts = [
     { name: "verdana" },
     { name: "courier" },
     { name: "Comic Sans MS" },
     { name: "Arial Black" },
     { name: "Times New Roman" },
     { name: "Georgia" },
-    { name: "Blackadder ITC" }
+    { name: "Blackadder ITC" },
+    { name: "Roboto" }
   ];
   
   constructor() { }

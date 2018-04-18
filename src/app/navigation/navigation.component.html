@@ -1,9 +1,9 @@
 <mat-toolbar color="primary" class="toolbar" [style.background]="selectedColor" [style.font-family]="selectedFont || 'Roboto'">
   <mat-toolbar-row>
-    <span><img alt="angular" class="angular-logo" src="../../assets/svg/angular.svg"> Material CDK</span>
+    <span [style.font-family]="selectedFont || 'Roboto'"><img alt="angular" class="angular-logo" src="../../assets/svg/angular.svg"> Material CDK</span>
     <span class="spacer"></span>
-    <button mat-button [routerLink]="['']" class="navigation-opt">Home <mat-icon>home</mat-icon></button>
-    <button mat-button [routerLink]="['talks']" class="navigation-opt">Talks</button>
+    <button mat-button [routerLink]="['']" class="navigation-opt" [style.font-family]="selectedFont || 'Roboto'"><mat-icon>home</mat-icon> Home</button>
+    <button mat-button [routerLink]="['talks']" class="navigation-opt" [style.font-family]="selectedFont || 'Roboto'"><mat-icon>mic</mat-icon> Talks</button>
     <button mat-button 
       (click)="isOpen = !isOpen" 
       cdkOverlayOrigin 
@@ -21,7 +21,7 @@
   [cdkConnectedOverlayOpen]="isOpen">
   <div class="color-picker"
       role="dialog" aria-label="Color picker">
-    <div role="listbox" tabindex="0" aria-label="Select a color">
+    <div class="selector-color-container" role="listbox" tabindex="0" aria-label="Select a color">
       <div *ngFor="let color of colors; index as i"
           role="option"
           [style.background]="color.hex"
@@ -37,7 +37,7 @@
 [cdkConnectedOverlayOpen]="isOpenFont"
 >
   <div class="font-picker">
-    <div class="listfont" (click)="selectedFont=item.name;isOpen=false"  *ngFor="let item of fonts" >
+    <div class="listfont" (click)="selectedFont = item.name; isOpenFont=false"  *ngFor="let item of fonts" >
       {{item.name}}
     </div>
   </div>
