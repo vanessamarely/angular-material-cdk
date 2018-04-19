@@ -8,19 +8,19 @@
 
     <mat-table #table [dataSource]="dataSource" matSort>
   
-      <ng-container matColumnDef="speaker">
+      <ng-container matColumnDef="speakerName">
         <mat-header-cell *matHeaderCellDef mat-sort-header> <mat-icon>account circle</mat-icon> Speaker List</mat-header-cell>
         <mat-cell *matCellDef="let element"> 
             <mat-card class="speaker">
               <img mat-card-avatar src={{element.speakerImage}}>
-              <h3 class="speaker-name" mat-line>{{element.speaker}}</h3>
+              <h3 class="speaker-name" mat-line>{{element.speakerName}}</h3>
             </mat-card>
         </mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="name">
+      <ng-container matColumnDef="talkName">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Talk Name </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.talkName}} </mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="date">

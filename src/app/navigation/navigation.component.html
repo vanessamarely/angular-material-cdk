@@ -21,7 +21,7 @@
   [cdkConnectedOverlayOpen]="isOpen">
   <div class="color-picker"
       role="dialog" aria-label="Color picker">
-    <div class="selector-color-container" role="listbox" tabindex="0" aria-label="Select a color">
+    <div class="selector-color-container" role="listbox" tabindex="0" aria-label="Select a color" cdkTrapFocus cdkTrapFocusAutoCapture>
       <div *ngFor="let color of colors; index as i"
           role="option"
           [style.background]="color.hex"
@@ -42,3 +42,4 @@
     </div>
   </div>
 </ng-template>
+

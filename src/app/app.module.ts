@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { A11yModule } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
+import {PortalModule} from '@angular/cdk/portal';
 
 import { CommonModule } from '@angular/common';
 
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TalksComponent } from './talks/talks.component';
 
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { TalksComponent } from './talks/talks.component';
     MaterialModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

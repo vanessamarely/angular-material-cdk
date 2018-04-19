@@ -8,6 +8,9 @@
   .mat-table {
     overflow: auto;
     max-height: 500px;
+    .mat-header-cell {
+      font-size: 14px;
+    }
     .mat-card { 
       padding: 20px 5px;
       &.speaker {
@@ -33,3 +36,4 @@
   }
 
 }
+
