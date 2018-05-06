@@ -1,7 +1,7 @@
 # AngularMaterialDemo
 Angular week demo application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4 and has been updated to latest version Angular CLI: 6.0.0
 
 
 ## Set up the Development Environment and Run Demo
